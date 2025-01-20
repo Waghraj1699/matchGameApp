@@ -313,38 +313,38 @@ class App extends Component {
       eachValue => eachValue.category === category,
     )
     return (
-      <div className="main-container">
-        <nav className="nav-bar">
+      <div className='main-container'>
+        <nav className='nav-bar'>
           <img
-            src="https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png"
-            className="top-image"
-            alt="website logo"
+            src='https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png'
+            className='top-image'
+            alt='website logo'
           />
-          <ul className="score-div">
-            <li className="score-name">
+          <ul className='score-div'>
+            <li className='score-name'>
               <p>
-                Score: <span className="score">{score}</span>
+                Score: <span className='score'>{score}</span>
               </p>
             </li>
-            <li className="score-div">
+            <li className='score-div'>
               <img
-                src="https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png"
-                alt="timer"
-                className="timer-img"
+                src='https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png'
+                alt='timer'
+                className='timer-img'
               />
-              <p className="time">{time} sec</p>
+              <p className='time'>{time} sec</p>
             </li>
           </ul>
         </nav>
-        <div className="content-div">
+        <div className='content-div'>
           {!isTrue && (
-            <div className="first-div">
-              <img src={imgUrl} className="big-image" alt="match" />
-              <ul className="tab-elements">
+            <div className='first-div'>
+              <img src={imgUrl} className='big-image' alt='match' />
+              <ul className='tab-elements'>
                 {tabsList.map(eachValue => (
                   <li key={eachValue.tabId}>
                     <button
-                      type="button"
+                      type='button'
                       className={`tab-button ${
                         category === eachValue.tabId ? 'highlight-text' : ''
                       }`}
@@ -355,18 +355,18 @@ class App extends Component {
                   </li>
                 ))}
               </ul>
-              <ul className="thumbnail-images">
+              <ul className='thumbnail-images'>
                 {thumbnailList.map(eachObject => (
                   <li key={eachObject.id}>
                     <button
-                      type="button"
-                      className="image-button"
+                      type='button'
+                      className='image-button'
                       onClick={() => this.imageClick(eachObject.thumbnailUrl)}
                     >
                       <img
                         src={eachObject.thumbnailUrl}
-                        className="thumbnail-image"
-                        alt="thumbnail"
+                        className='thumbnail-image'
+                        alt='thumbnail'
                       />
                     </button>
                   </li>
@@ -375,23 +375,23 @@ class App extends Component {
             </div>
           )}
           {isTrue && (
-            <div className="second-div">
+            <div className='second-div'>
               <img
-                src="https://assets.ccbp.in/frontend/react-js/match-game-trophy.png"
-                className="trophy-image"
-                alt="trophy"
+                src='https://assets.ccbp.in/frontend/react-js/match-game-trophy.png'
+                className='trophy-image'
+                alt='trophy'
               />
-              <p className="main-heading">YOUR SCORE</p>
-              <p className="your-score">{score}</p>
+              <p className='main-heading'>YOUR SCORE</p>
+              <p className='your-score'>{score}</p>
               <button
-                type="button"
-                className="play-button"
+                type='button'
+                className='play-button'
                 onClick={this.playAgain}
               >
                 <img
-                  src="https://assets.ccbp.in/frontend/react-js/match-game-play-again-img.png"
-                  className="restart"
-                  alt="reset"
+                  src='https://assets.ccbp.in/frontend/react-js/match-game-play-again-img.png'
+                  className='restart'
+                  alt='reset'
                 />
                 PLAY AGAIN
               </button>
